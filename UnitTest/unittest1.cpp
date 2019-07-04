@@ -15,6 +15,11 @@ namespace UnitTest
 			Assert::AreEqual(2, Util::fib(3));
 			Assert::AreEqual(5, Util::fib(5));
 			Assert::AreEqual(6765, Util::fib(20));
+
+			for (auto i = 40; i < 50; i++)
+			{
+				Assert::IsTrue(Util::fib(i) + Util::fib(i + 1) == Util::fib(i + 2));
+			}
 		}
 
 		TEST_METHOD(isFibonacci)
